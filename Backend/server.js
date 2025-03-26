@@ -9,6 +9,12 @@ const app = express()
 
 app.use(cors())
 
+const pool = new Pool({
+  user: 'postgres',
+  host: '127.0.0.1',
+  password: 'libraayra',
+  port: 5432,
+});
 
 app.use(express.json())
 
